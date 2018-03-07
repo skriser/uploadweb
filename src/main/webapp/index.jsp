@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -6,6 +7,7 @@
   </head>
   
   <body>
+  	<br>""pageContext.request.contextPath为：" ${pageContext.request.contextPath}<br>
     <form action="${pageContext.request.contextPath}/servlet/UploadHandleServlet" enctype="multipart/form-data" method="post">
         上传用户：<input type="text" name="username"><br/>
         上传文件1：<input type="file" name="file1"><br/>

@@ -1,10 +1,16 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="UTF-8"  isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE HTML>
 <html>
   <head>
     <title>文件上传</title>
   </head>
-  
+  <%  
+    String path = request.getContextPath();  
+  String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";  
+%>  
+<c:set var="cp" value="<%=basePath%>" />  
+<br>""pageContext.request.contextPath为：" value="<%=basePath%>" 
   <body>
     <form action="${pageContext.request.contextPath}/servlet/UploadHandleServlet" enctype="multipart/form-data" method="post">
         上传用户：<input type="text" name="username"><br/>

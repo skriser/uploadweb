@@ -9,10 +9,14 @@
   <servlet>
     <servlet-name>UploadHandleServlet</servlet-name>
     <servlet-class>com.pingan.upload.web.UploadHandleServlet</servlet-class>
-</servlet>
+ </servlet>
 
 <servlet-mapping>
     <servlet-name>UploadHandleServlet</servlet-name>
     <url-pattern>/servlet/UploadHandleServlet</url-pattern>
 </servlet-mapping>
+<!-- 配置访问一个jsp页面的路径 -->
+	<welcome-file-list>
+    <welcome-file>/WEB-INF/view/upload.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
